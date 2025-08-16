@@ -91,13 +91,14 @@ class GameObject {
 class Dino extends GameObject {
     constructor() {
         const size = 40;
-        super(50, canvas.height - groundHeight - size, size, size, '#f0f');
+        super(50, canvas.height - groundHeight - size, size, size, 'rgba(58, 77, 6, 1)');
         this.isHazard = false;
         this.dy = 0;
         this.isJumping = false;
         this.originalHeight = size;
         this.ducking = false;
         this.image = new Image();
+        // You can change the image of the main block in the line belowwwww
         this.image.src = 'https://toppng.com/uploads/thumbnail/block-of-grass-from-the-game-minecraft-minecraft-grass-block-vector-11562868488whfdyakzjr.png';
         this.imageLoaded = false;
         this.imageFailed = false;
