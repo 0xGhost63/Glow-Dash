@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+    color: #0ff;
+}
+canvas {
+    background: #111;
+    display: block;
+    border: 3px solid #0ff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+.ui-overlay {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1000px;
+    font-size: 20px;
+    text-shadow: 0 0 5px #0ff;
+    z-index: 10;
+}
+.score-container, .high-score-container {
+    flex: 1;
+}
+.score-container { text-align: left; }
+.high-score-container { text-align: right; }
+.info-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    text-shadow: 0 0 10px #0f0;
+    white-space: nowrap;
+    display: none;
+    z-index: 20;
+}
+.info-text.visible { display: block; }
+.info-text.hidden { display: none; }
+
+.top-info-text {
+    top: 10%;
+    transform: translateX(-50%);
+    font-size: 2.5em;
+}
+
+.bottom-ui-overlay {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #0ff;
+    box-shadow: 0 0 10px #0ff;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    text-align: center;
+}
+
+.bottom-ui-overlay.warning {
+    border-color: #f00;
+    box-shadow: 0 0 15px #f00;
+}
+
+.bottom-ui-overlay span {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ff0;
+    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .info-text {
+        font-size: 1.5em;
+    }
+    .ui-overlay, .bottom-ui-overlay {
+        font-size: 16px;
+        top: 10px;
+    }
+    .bottom-ui-overlay {
+        bottom: 10px;
+    }
+}

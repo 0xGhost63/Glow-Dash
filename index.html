@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Dash Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div class="ui-overlay">
+        <div class="score-container">Score: <span id="score">0</span></div>
+        <div class="high-score-container">High Score: <span id="high-score">0</span></div>
+    </div>
+    <div id="boost-timer-container" class="bottom-ui-overlay" style="display:none;">Boost: <span id="boost-timer"></span>s</div>
+    <div id="start-text" class="info-text visible">Press SPACE to Start</div>
+    <div id="controls-text" class="info-text bottom-info-text visible" style="top: 60%; font-size: 1.2em;">Use UP/DOWN Arrows to jump and land quickly</div>
+    <div id="game-over-text" class="info-text top-info-text">Game Over</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
